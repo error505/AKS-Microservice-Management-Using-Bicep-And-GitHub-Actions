@@ -1,11 +1,3 @@
-
-### `README.md` for `receiver_function/`
-
-Similar to the sender function's README, provide detailed instructions for the receiver function.
-
-#### `receiver_function/README.md`
-
-```markdown
 # Receiver Function
 
 This directory contains the receiver Azure Function implemented in Python, which listens for messages from an Azure Service Bus queue.
