@@ -21,11 +21,22 @@ The function connects to Azure Service Bus and sends a message to the configured
 pip install --no-cache-dir -r requirements.txt
 ```
 
-## Run the function locally
+## Test the Function Locally
+
+You can use a tool like `curl` or Postman to send a POST request to your function to test it locally. Make sure your local environment is configured correctly with `SERVICE_BUS_CONNECTION_STRING` and `SERVICE_BUS_QUEUE_NAME`.
+
+Example `curl` command to test the API:
 
 ```bash
-python function_app.py
+curl -X POST http://localhost:7071/api/send-message \
+   -H "Content-Type: application/json" \
+   -d '{"message": "Hello, this is a custom message!"}'
 ```
+
+### Note
+
+- **Environment Variables**: Ensure that the necessary environment variables (`SERVICE_BUS_CONNECTION_STRING` and `SERVICE_BUS_QUEUE_NAME`) are properly configured in your `local.settings.json` and in your cloud deployment.
+- **Deployment**: If you are deploying this as a Docker container, ensure the image is updated and pushed to the appropriate container registry.
 
 ### 3. Build Docker Image
 
@@ -47,3 +58,5 @@ docker push <acr_name>.azurecr.io/sender_function:latest
 ### 5. Deploy to AKS
 
 Follow the instructions in the k8s/README.md to deploy this function to AKS using the provided Kubernetes manifest.
+
+
