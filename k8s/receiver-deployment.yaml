@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: receiver-function
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: receiver-function
+  template:
+    metadata:
+      labels:
+        app: receiver-function
+    spec:
+      containers:
+      - name: receiver-function
+        image: <acr_name>.azurecr.io/receiver_function:latest
+        env:
+        - name: SERVICE_BUS_CONNECTION_STRING
+          valueFrom:
+            secretKeyRef:
+              name: servicebus-credentials
+              key: connectionString
+        - name: SERVICE_BUS_QUEUE_NAME
+          value: "importmessages"
