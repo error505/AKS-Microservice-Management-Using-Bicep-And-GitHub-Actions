@@ -2,6 +2,9 @@
 
 This repository demonstrates how to deploy and manage containerised microservices using Azure Kubernetes Service (AKS), Azure Functions, and Azure Service Bus, along with CI/CD using GitHub Actions. The microservices are implemented as Azure Functions in Python, communicating over Azure Service Bus, and are orchestrated using AKS.
 
+![image](https://github.com/user-attachments/assets/de5b907d-ceb2-4f02-a032-cc73a9385185)
+
+
 ## Repository Structure
 
 - `.github/workflows/deploy.yml`: GitHub Actions workflow for building, pushing Docker images, and deploying to AKS.
@@ -10,27 +13,6 @@ This repository demonstrates how to deploy and manage containerised microservice
 - `k8s/`: Kubernetes manifests to deploy the Azure Functions on AKS.
 - `bicep/`: Bicep template for provisioning required Azure resources like AKS, ACR, and Azure Service Bus.
   
-azure-microservices-aks/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml            # GitHub Actions workflow for CI/CD
-├── sender_function/
-│   ├── Dockerfile                # Dockerfile for sender function
-│   ├── main.py                   # Python code for the sender function
-│   └── README.md                 # Readme for the sender function
-├── receiver_function/
-│   ├── Dockerfile                # Dockerfile for receiver function
-│   ├── main.py                   # Python code for the receiver function
-│   └── README.md                 # Readme for the receiver function
-├── k8s/
-│   ├── sender-deployment.yaml    # Kubernetes manifest for sender function
-│   ├── receiver-deployment.yaml  # Kubernetes manifest for receiver function
-│   └── README.md                 # Readme for Kubernetes manifests
-├── bicep/
-│   ├── azure-resources.bicep     # Bicep template to create Azure resources
-│   └── README.md                 # Readme for the Bicep template
-└── README.md                     # Main Readme for the repository
-
 
 ## Prerequisites
 
