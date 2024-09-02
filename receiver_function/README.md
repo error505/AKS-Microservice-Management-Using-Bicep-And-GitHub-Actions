@@ -5,6 +5,7 @@ This directory contains the receiver Azure Function implemented in Python, which
 ## Function Overview
 
 The function connects to Azure Service Bus and listens for messages from the configured queue, processing them as they arrive.
+![image](https://github.com/user-attachments/assets/b94056e7-ec0b-44ed-be5f-de255883b1e3)
 
 ## Setup Instructions
 
