@@ -39,3 +39,6 @@ Deploy the sender and receiver functions using the Kubernetes manifests found in
 ### 4. Configure GitHub Actions for CI/CD
 
 Set up GitHub Secrets for Azure credentials, ACR credentials, and Service Bus connection string as described in the `README.md` files.
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
