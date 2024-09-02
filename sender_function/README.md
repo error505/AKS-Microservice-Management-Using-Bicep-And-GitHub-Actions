@@ -5,6 +5,7 @@ This directory contains the sender Azure Function implemented in Python, which s
 ## Function Overview
 
 The function connects to Azure Service Bus and sends a message to the configured queue.
+![image](https://github.com/user-attachments/assets/4f7b557a-a7ee-4bf6-b6d3-79befd5a8b1f)
 
 ## Setup Instructions
 
