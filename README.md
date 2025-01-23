@@ -2,7 +2,8 @@
 
 This repository demonstrates how to deploy and manage containerised microservices using Azure Kubernetes Service (AKS), Azure Functions, and Azure Service Bus, along with CI/CD using GitHub Actions. The microservices are implemented as Azure Functions in Python, communicating over Azure Service Bus, and are orchestrated using AKS.
 
-![image](https://github.com/user-attachments/assets/de5b907d-ceb2-4f02-a032-cc73a9385185)
+![image](https://github.com/user-attachments/assets/c0eb6c58-8d17-4ce0-8244-cffb6b185b2e)
+
 
 
 ## Repository Structure
